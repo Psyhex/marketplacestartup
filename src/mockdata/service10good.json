@@ -1,0 +1,92 @@
+[
+    {
+        "service_id": 1,
+        "service_title": "Cardguard",
+        "service_description": "Emilien",
+        "service_img": "http://dummyimage.com/366x476.png/dddddd/000000",
+        "service_price": 3020,
+        "service_location": "Ekibastuz",
+        "service_verified": true
+    },
+    {
+        "service_id": 2,
+        "service_title": "Bigtax",
+        "service_description": "Swyer-Sexey",
+        "service_img": "http://dummyimage.com/419x318.png/ff4444/ffffff",
+        "service_price": 1140,
+        "service_location": "Žiežmariai",
+        "service_verified": false
+    },
+    {
+        "service_id": 3,
+        "service_title": "Rank",
+        "service_description": "Ledwidge",
+        "service_img": "http://dummyimage.com/437x423.png/ff4444/ffffff",
+        "service_price": 4867,
+        "service_location": "Tatarka",
+        "service_verified": false
+    },
+    {
+        "service_id": 4,
+        "service_title": "Daltfresh",
+        "service_description": "McLanachan",
+        "service_img": "http://dummyimage.com/495x496.png/cc0000/ffffff",
+        "service_price": 439,
+        "service_location": "Aleksandrovsk-Sakhalinskiy",
+        "service_verified": false
+    },
+    {
+        "service_id": 5,
+        "service_title": "Opela",
+        "service_description": "Crewther",
+        "service_img": "http://dummyimage.com/390x329.png/cc0000/ffffff",
+        "service_price": 4835,
+        "service_location": "Severo-Zadonsk",
+        "service_verified": true
+    },
+    {
+        "service_id": 6,
+        "service_title": "Home Ing",
+        "service_description": "Manhood",
+        "service_img": "http://dummyimage.com/482x404.png/cc0000/ffffff",
+        "service_price": 776,
+        "service_location": "Paris 14",
+        "service_verified": false
+    },
+    {
+        "service_id": 7,
+        "service_title": "Temp",
+        "service_description": "Tracey",
+        "service_img": "http://dummyimage.com/296x386.png/dddddd/000000",
+        "service_price": 4804,
+        "service_location": "Novoishimskiy",
+        "service_verified": true
+    },
+    {
+        "service_id": 8,
+        "service_title": "Overhold",
+        "service_description": "Roskell",
+        "service_img": "http://dummyimage.com/390x312.png/ff4444/ffffff",
+        "service_price": 1208,
+        "service_location": "Mircze",
+        "service_verified": false
+    },
+    {
+        "service_id": 9,
+        "service_title": "Domainer",
+        "service_description": "Bevington",
+        "service_img": "http://dummyimage.com/472x289.png/dddddd/000000",
+        "service_price": 2841,
+        "service_location": "Jiji",
+        "service_verified": true
+    },
+    {
+        "service_id": 10,
+        "service_title": "Bitwolf",
+        "service_description": "Goodliffe",
+        "service_img": "http://dummyimage.com/477x414.png/ff4444/ffffff",
+        "service_price": 3960,
+        "service_location": "Chocos",
+        "service_verified": false
+    }
+]
