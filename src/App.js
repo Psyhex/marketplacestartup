@@ -8,6 +8,7 @@ import Service from './pages/Service';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import AddService from './pages/AddService';
+import NavBar from './components/NavBar';
 
 function App() {
   const home = "/";
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <div className="App">
+      <NavBar/>
       <Routes>
         <Route path={home} element={<Home />} />
         <Route path={services} element={<Services />} />
