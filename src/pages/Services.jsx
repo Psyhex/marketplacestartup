@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import { Slider } from "@mui/material";
 import React from "react";
-import ServiceCard from "../components/ServiceCard";
+import ServiceCard from "../components/ServiceCard/ServiceCard";
 import service10good from "../mockdata/service10good.json";
 
 function Services() {

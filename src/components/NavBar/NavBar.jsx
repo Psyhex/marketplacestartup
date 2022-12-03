@@ -1,11 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import "../styles/NavBar.css";
+import "./NavBar.css";
 import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import { IoMdAddCircleOutline } from "react-icons/io";
+import { ABOUT, ADD_SERVICE, HOME, SERVICES } from "../../constants/routes";
 
 function NavBar() {
   const [click, setClick] = useState(false);
@@ -19,7 +20,7 @@ function NavBar() {
       <IconContext.Provider value={{ color: "#fff" }}>
         <nav className="navbar">
           <div className="navbar-container container">
-            <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+            <Link to={HOME} className="navbar-logo" onClick={closeMobileMenu}>
               {pageTitle}
             </Link>
             <div className="menu-icon" onClick={handleClick}>
@@ -28,7 +29,7 @@ function NavBar() {
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">
                 <NavLink
-                  to="/"
+                  to={HOME}
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
@@ -39,7 +40,7 @@ function NavBar() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/about"
+                  to={ABOUT}
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
@@ -50,7 +51,7 @@ function NavBar() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/services"
+                  to={SERVICES}
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
@@ -61,7 +62,7 @@ function NavBar() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/addService"
+                  to={ADD_SERVICE}
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }

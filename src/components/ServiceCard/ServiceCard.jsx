@@ -7,7 +7,7 @@ import {
   Typography,
   Button,
 } from "@mui/material";
-import "../styles/ServiceCardStyles.css";
+import "./ServiceCard.css";
 
 function ServiceCard({ service }) {
   const priceTag = "€/Day";
