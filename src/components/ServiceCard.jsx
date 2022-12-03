@@ -10,8 +10,8 @@ import {
 import "../styles/ServiceCardStyles.css";
 
 function ServiceCard({ service }) {
-  const priceTag = "€/Parai";
-  const location = "Vieta ";
+  const priceTag = "€/Day";
+  const location = "Location - ";
   return (
     <Card className="ServiceCard">
       <CardMedia
@@ -21,10 +21,10 @@ function ServiceCard({ service }) {
       />
       <CardContent>
         <div className="ServiceCardContent">
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="body1" gutterBottom>
             {service.service_title}
           </Typography>
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="body1" gutterBottom>
             {service.service_price}
             {priceTag}
           </Typography>

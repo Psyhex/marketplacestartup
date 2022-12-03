@@ -4,12 +4,15 @@ import "../styles/NavBar.css";
 import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import { IoMdAddCircleOutline } from "react-icons/io";
 
 function NavBar() {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+  const pageTitle = "Homestead Rent";
 
   return (
     <>
@@ -17,7 +20,7 @@ function NavBar() {
         <nav className="navbar">
           <div className="navbar-container container">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-              Sodybu Nuoma
+              {pageTitle}
             </Link>
             <div className="menu-icon" onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
@@ -54,6 +57,17 @@ function NavBar() {
                   onClick={closeMobileMenu}
                 >
                   Services
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/addService"
+                  className={({ isActive }) =>
+                    "nav-links" + (isActive ? " activated" : "")
+                  }
+                  onClick={closeMobileMenu}
+                >
+                Add Service
                 </NavLink>
               </li>
             </ul>
