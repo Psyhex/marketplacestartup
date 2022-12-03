@@ -7,13 +7,13 @@ import { IconContext } from "react-icons/lib";
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import { IoMdAddCircleOutline } from "react-icons/io";
 import { ABOUT, ADD_SERVICE, HOME, SERVICES } from "../../constants/routes";
+import { NAV_BAR_ABOUT, NAV_BAR_ADD_SERVICE, NAV_BAR_HOME, NAV_BAR_SERVICES, NAV_BAR_TITLE } from "../../constants/navbartitles";
 
 function NavBar() {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  const pageTitle = "Homestead Rent";
 
   return (
     <>
@@ -21,7 +21,7 @@ function NavBar() {
         <nav className="navbar">
           <div className="navbar-container container">
             <Link to={HOME} className="navbar-logo" onClick={closeMobileMenu}>
-              {pageTitle}
+              {NAV_BAR_TITLE}
             </Link>
             <div className="menu-icon" onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
@@ -35,7 +35,7 @@ function NavBar() {
                   }
                   onClick={closeMobileMenu}
                 >
-                  Home
+                  {NAV_BAR_HOME}
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -46,7 +46,7 @@ function NavBar() {
                   }
                   onClick={closeMobileMenu}
                 >
-                  About
+                  {NAV_BAR_ABOUT}
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -57,7 +57,7 @@ function NavBar() {
                   }
                   onClick={closeMobileMenu}
                 >
-                  Services
+                  {NAV_BAR_SERVICES}
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -68,7 +68,7 @@ function NavBar() {
                   }
                   onClick={closeMobileMenu}
                 >
-                Add Service
+                {NAV_BAR_ADD_SERVICE}
                 </NavLink>
               </li>
             </ul>
