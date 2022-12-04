@@ -1,5 +1,4 @@
-import { Grid } from "@mui/material";
-import { Slider } from "@mui/material";
+import { Grid, Slider } from "@mui/material";
 import React from "react";
 import ServiceCard from "../components/ServiceCard/ServiceCard";
 import service10good from "../mockdata/service10good.json";
@@ -33,5 +32,4 @@ function Services() {
     </>
   );
 }
-
 export default Services;
