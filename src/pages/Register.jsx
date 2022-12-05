@@ -13,9 +13,11 @@ export default function Register() {
     name: "",
     surname: "",
     email: "",
-    password: "",
+    password_one: "",
+    password_two: "",
     account_type: "",
   });
+  const [usernameValid, setUsernameValid] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -23,9 +25,18 @@ export default function Register() {
       return { ...prev, [name]: value };
     });
   };
+  const validate = () => {
+    if (!registrationData.username.trim()) {
+      setUsernameValid(true);
+    }else{
+      setUsernameValid(false);
+    }
+  }
   const handleSubmit = () => {
+    validate();
     console.log(registrationData);
   };
+  
   return (
     <>
       <Container maxWidth="xs">
@@ -37,6 +48,8 @@ export default function Register() {
             label="Username"
             variant="outlined"
             onChange={handleChange}
+            error={usernameValid}
+            helperText={usernameValid ? "UserName not valid" : ""}
           />
           <TextField
             id="outlined-basic"
@@ -61,7 +74,7 @@ export default function Register() {
           />
           <TextField
             id="outlined-basic"
-            name="password"
+            name="password_one"
             label="Password"
             type="password"
             variant="outlined"
@@ -70,6 +83,7 @@ export default function Register() {
           />
           <TextField
             id="outlined-basic"
+            name="password_two"
             label="Password"
             type="password"
             variant="outlined"
