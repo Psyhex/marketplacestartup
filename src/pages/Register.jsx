@@ -18,28 +18,38 @@ export default function Register() {
   const pageTitle = "Registration Form";
   const minPasswordLength = 8;
 
+  const inputUsername = "Username";
+  const inputEmail = "Email";
+  const inputFirstName = "First name";
+  const inputLastname = "Last name";
+  const inputPassword = "Password";
+  const inputConfirmPassword = "Confirm password";
+  const inputAccountType = "Account Type";
+
   const validationSchema = yup.object({
     email: yup
       .string("Enter your email")
       .email("Enter a valid email")
       .required("Email is required"),
-    password_one: yup
+    password: yup
       .string("Enter your password")
       .min(
         minPasswordLength,
         "Password should be of minimum 8 characters length"
       )
       .required("Password is required"),
-    password_two: yup
+    confirm_password: yup
       .string("Enter your password")
-      .oneOf([yup.ref("password_one"), null], "Password must match")
+      .oneOf([yup.ref("password"), null], "Password must match")
       .required("Password is required"),
     username: yup
       .string("Enter your username")
       .min(5, "Username should be of minimum 5 characters length")
       .required("Username is required"),
-    name: yup.string("Enter your name").required("Name is required"),
-    surname: yup.string("Enter your name").required("Surname is required"),
+    firstname: yup
+      .string("Enter your first name")
+      .required("First name is required"),
+    lastname: yup.string("Enter your name").required("Lastname is required"),
     account_type: yup
       .string("Select your account type")
       .required("Account type is required"),
@@ -48,11 +58,11 @@ export default function Register() {
   const formik = useFormik({
     initialValues: {
       username: "",
-      name: "",
-      surname: "",
+      firstname: "",
+      lastname: "",
       email: "",
-      password_one: "",
-      password_two: "",
+      password: "",
+      confirm_password: "",
       account_type: "",
     },
     validationSchema: validationSchema,
@@ -70,7 +80,7 @@ export default function Register() {
             <TextField
               id="outlined-basic"
               name="username"
-              label="Username"
+              label={inputUsername}
               variant="outlined"
               value={formik.values.username}
               onChange={formik.handleChange}
@@ -79,28 +89,30 @@ export default function Register() {
             />
             <TextField
               id="outlined-basic"
-              name="name"
-              label="Name"
+              name="firstname"
+              label={inputFirstName}
               variant="outlined"
-              value={formik.values.name}
+              value={formik.values.firstname}
               onChange={formik.handleChange}
-              error={formik.touched.name && Boolean(formik.errors.name)}
-              helperText={formik.touched.name && formik.errors.name}
+              error={
+                formik.touched.firstname && Boolean(formik.errors.firstname)
+              }
+              helperText={formik.touched.firstname && formik.errors.firstname}
             />
             <TextField
               id="outlined-basic"
-              name="surname"
-              label="Surname"
+              name="lastname"
+              label={inputLastname}
               variant="outlined"
-              value={formik.values.surname}
+              value={formik.values.lastname}
               onChange={formik.handleChange}
-              error={formik.touched.surname && Boolean(formik.errors.surname)}
-              helperText={formik.touched.surname && formik.errors.surname}
+              error={formik.touched.lastname && Boolean(formik.errors.lastname)}
+              helperText={formik.touched.lastname && formik.errors.lastname}
             />
             <TextField
               id="outlined-basic"
               name="email"
-              label="Email"
+              label={inputEmail}
               variant="outlined"
               value={formik.values.email}
               onChange={formik.handleChange}
@@ -109,36 +121,32 @@ export default function Register() {
             />
             <TextField
               id="outlined-basic"
-              name="password_one"
-              label="Password"
+              name="password"
+              label={inputPassword}
               type="password"
               variant="outlined"
               password
-              value={formik.values.password_one}
+              value={formik.values.password}
               onChange={formik.handleChange}
-              error={
-                formik.touched.password_one &&
-                Boolean(formik.errors.password_one)
-              }
-              helperText={
-                formik.touched.password_one && formik.errors.password_one
-              }
+              error={formik.touched.password && Boolean(formik.errors.password)}
+              helperText={formik.touched.password && formik.errors.password}
             />
             <TextField
               id="outlined-basic"
-              name="password_two"
-              label="Password"
+              name="confirm_password"
+              label={inputConfirmPassword}
               type="password"
               variant="outlined"
               password
-              value={formik.values.password_two}
+              value={formik.values.confirm_password}
               onChange={formik.handleChange}
               error={
-                formik.touched.password_two &&
-                Boolean(formik.errors.password_two)
+                formik.touched.confirm_password &&
+                Boolean(formik.errors.confirm_password)
               }
               helperText={
-                formik.touched.password_two && formik.errors.password_two
+                formik.touched.confirm_password &&
+                formik.errors.confirm_password
               }
             />
             <FormControl fullWidth>
@@ -152,7 +160,7 @@ export default function Register() {
               </InputLabel>
               <Select
                 name="account_type"
-                label="Account type"
+                label={inputAccountType}
                 value={formik.values.account_type}
                 onChange={formik.handleChange}
                 error={
