@@ -2,7 +2,7 @@
     {
         "service_id": 1,
         "service_title": "Cardguard",
-        "service_description": "Emilien",
+        "service_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut convallis lorem, sit amet accumsan neque. Fusce volutpat nibh nec metus tincidunt, at mollis magna ultricies. Curabitur ultricies elementum risus, ut efficitur risus aliquam ut. Mauris ut tortor luctus, facilisis purus in, sagittis augue. Donec feugiat auctor diam, ut maximus lacus suscipit in. Suspendisse interdum, metus sed maximus dignissim, ante nibh ullamcorper lectus, quis molestie metus augue non risus. In eu urna eros.",
         "service_img": "http://dummyimage.com/366x476.png/dddddd/000000",
         "service_price": 3020,
         "service_location": "Ekibastuz",

@@ -1,7 +1,8 @@
 export const HOME = "/";
-export const SERVICES = "/services";
+export const SERVICES = "/services/";
 export const SERVICE = "/service/";
-export const USER_PROFILE = "/user/";
+export const SERVICE_ID = "/service/:id";
+export const USER_PROFILE = "/user/:id";
 export const ABOUT = "/about";
 export const REGISTER = "/register";
 export const LOGIN = "/login";

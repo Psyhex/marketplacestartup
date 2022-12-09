@@ -10,7 +10,7 @@ import Login from './pages/Login';
 import AddService from './pages/AddService';
 import NavBar from './components/NavBar/NavBar';
 import Container from '@mui/material/Container';
-import { ABOUT, ADD_SERVICE, HOME, LOGIN, REGISTER, SERVICE, SERVICES, USER_PROFILE } from './constants/routes';
+import { ABOUT, ADD_SERVICE, HOME, LOGIN, REGISTER, SERVICE, SERVICES, SERVICE_ID, USER_PROFILE } from './constants/routes';
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
             <Route path={ABOUT} element={<About />} />
             <Route path={USER_PROFILE} element={<UserProfile />} />
             <Route path={SERVICE} element={<Service />} />
+            <Route path={SERVICE_ID} element={<Service />} />
             <Route path={REGISTER} element={<Register />} />
             <Route path={LOGIN} element={<Login />} />
             <Route path={ADD_SERVICE} element={<AddService />} />
