@@ -7,3 +7,4 @@ export const ABOUT = "/about";
 export const REGISTER = "/register";
 export const LOGIN = "/login";
 export const ADD_SERVICE= "/addService";
+export const PRIVACY_POLICY = "/privacyPolicy";

@@ -4,8 +4,6 @@ import "./NavBar.css";
 import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import { IoMdAddCircleOutline } from "react-icons/io";
 import { ABOUT, ADD_SERVICE, HOME, SERVICES } from "../../constants/routes";
 import { NAV_BAR_ABOUT, NAV_BAR_ADD_SERVICE, NAV_BAR_HOME, NAV_BAR_SERVICES, NAV_BAR_TITLE } from "../../constants/navbartitles";
 

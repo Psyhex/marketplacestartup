@@ -10,7 +10,9 @@ import Login from './pages/Login';
 import AddService from './pages/AddService';
 import NavBar from './components/NavBar/NavBar';
 import Container from '@mui/material/Container';
-import { ABOUT, ADD_SERVICE, HOME, LOGIN, REGISTER, SERVICE, SERVICES, SERVICE_ID, USER_PROFILE } from './constants/routes';
+import { ABOUT, ADD_SERVICE, HOME, LOGIN, PRIVACY_POLICY, REGISTER, SERVICE, SERVICES, SERVICE_ID, USER_PROFILE } from './constants/routes';
+import Footer from './components/Footer/Footer';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   return (
@@ -28,9 +30,11 @@ function App() {
             <Route path={REGISTER} element={<Register />} />
             <Route path={LOGIN} element={<Login />} />
             <Route path={ADD_SERVICE} element={<AddService />} />
+            <Route path={PRIVACY_POLICY} element={<PrivacyPolicy />} />
           </Routes>
         </div>
       </Container>
+      <Footer/>
     </>
   );
 }
