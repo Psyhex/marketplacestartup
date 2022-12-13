@@ -19,12 +19,17 @@ function Services() {
 
   const handleChange = (event) => {
     setSortType(event.target.value);
-    if (event.target.value === defaultSort) {
-      setData(services.sort((a, b) => a.service_id - b.service_id));
-    } else if (event.target.value === ascSort) {
-      setData(services.sort((a, b) => a.service_price - b.service_price));
-    } else if (event.target.value === descSort) {
-      setData(services.sort((a, b) => b.service_price - a.service_price));
+    
+    switch(event.target.value){
+      case ascSort:
+        setData(services.sort((a, b) => a.service_price - b.service_price));
+        break;
+      case descSort:
+        setData(services.sort((a, b) => b.service_price - a.service_price));
+        break;
+      default:
+        setData(services.sort((a, b) => a.service_id - b.service_id));
+        break;
     }
   };
   return (
