@@ -13,17 +13,17 @@ function Services() {
   const [data, setData] = useState(services);
   const priceRangeIndicator = "Price range filter";
   const [sortType, setSortType] = useState("");
-  const defaultSort = "default";
-  const ascSort = "asc";
-  const descSort = "desc";
+  const defaultSort = "Default";
+  const ascSort = "Asc";
+  const descSort = "Desc";
 
   const handleChange = (event) => {
     setSortType(event.target.value);
     if (event.target.value === defaultSort) {
       setData(services.sort((a, b) => a.service_id - b.service_id));
-    } else if (event.target.value === "asc") {
+    } else if (event.target.value === ascSort) {
       setData(services.sort((a, b) => a.service_price - b.service_price));
-    } else if (event.target.value === "desc") {
+    } else if (event.target.value === descSort) {
       setData(services.sort((a, b) => b.service_price - a.service_price));
     }
   };
@@ -37,7 +37,7 @@ function Services() {
               <Slider
                 aria-label="Temperature"
                 defaultValue={30}
-                color="secondary"
+                color="primary"
               />
               <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">Sort Type</InputLabel>
