@@ -1,16 +1,27 @@
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Container from '@mui/material/Container';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import About from './pages/About';
-import { Route, Routes } from 'react-router-dom';
 import UserProfile from './pages/UserProfile';
 import Service from './pages/Service';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import AddService from './pages/AddService';
 import NavBar from './components/NavBar/NavBar';
-import Container from '@mui/material/Container';
-import { ABOUT, ADD_SERVICE, HOME, LOGIN, PRIVACY_POLICY, REGISTER, SERVICE, SERVICES, SERVICE_ID, USER_PROFILE } from './constants/routes';
+import {
+  ABOUT,
+  ADD_SERVICE,
+  HOME,
+  LOGIN,
+  PRIVACY_POLICY,
+  REGISTER,
+  SERVICE,
+  SERVICES,
+  SERVICE_ID,
+  USER_PROFILE,
+} from './constants/routes';
 import Footer from './components/Footer/Footer';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 
@@ -34,7 +45,7 @@ function App() {
           </Routes>
         </div>
       </Container>
-      <Footer/>
+      <Footer />
     </>
   );
 }

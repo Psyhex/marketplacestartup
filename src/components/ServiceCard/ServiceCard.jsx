@@ -1,12 +1,12 @@
-import React from "react";
-import { Card, CardMedia, CardContent, Typography } from "@mui/material";
-import "./ServiceCard.css";
-import { SERVICE } from "../../constants/routes";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Card, CardMedia, CardContent, Typography } from '@mui/material';
+import './ServiceCard.css';
+import { Link } from 'react-router-dom';
+import { SERVICE } from '../../constants/routes';
 
 function ServiceCard({ service }) {
-  const priceTag = "€/Day";
-  const location = "Location - ";
+  const priceTag = '€/Day';
+  const location = 'Location - ';
   return (
     <Link to={SERVICE + service.service_id} className="Link">
       <Card className="ServiceCard">

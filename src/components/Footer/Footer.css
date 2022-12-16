@@ -1,14 +1,14 @@
 .FooterContainer {
-    background-color: gray;
-    color: white;
+  background-color: gray;
+  color: white;
 }
 .Link {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 .Link:hover {
-    font-weight: bold;
+  font-weight: bold;
 }
 .CopyRight {
-    text-align: center;
+  text-align: center;
 }

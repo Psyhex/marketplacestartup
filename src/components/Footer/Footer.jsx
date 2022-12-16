@@ -1,8 +1,8 @@
-import React from "react";
-import { Box, Grid, Container, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
-import { NAV_BAR_ABOUT, NAV_BAR_TITLE } from "../../constants/navbartitles";
-import "./Footer.css";
+import React from 'react';
+import { Box, Grid, Container, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+import { NAV_BAR_ABOUT, NAV_BAR_TITLE } from '../../constants/navbartitles';
+import './Footer.css';
 import {
   ABOUT,
   ADD_SERVICE,
@@ -12,18 +12,18 @@ import {
   REGISTER,
   SERVICES,
   USER_PROFILE,
-} from "../../constants/routes";
+} from '../../constants/routes';
 function Footer() {
-  const service = "Service";
-  const allServices = "All Services";
-  const addService = "Add Service";
-  const popularServices = "Popular Services";
-  const login = "Login";
-  const register = "Register";
-  const userProfile = "Profile";
-  const home = "Home";
-  const privacyPolicy = "Privacy Policy";
-  const account = "Account";
+  const service = 'Service';
+  const allServices = 'All Services';
+  const addService = 'Add Service';
+  const popularServices = 'Popular Services';
+  const login = 'Login';
+  const register = 'Register';
+  const userProfile = 'Profile';
+  const home = 'Home';
+  const privacyPolicy = 'Privacy Policy';
+  const account = 'Account';
 
   return (
     <footer>
